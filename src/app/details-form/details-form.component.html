@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label>Age</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        ngModel
+        name="age" 
+        required />
+    </div>
+    <div class="form-group">
+      <label>Weight (kg)</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        ngModel
+        name="weight"
+        required />
+    </div>
+    <div class="form-group">
+      <label>Height (cm)</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        ngModel
+        name="height"
+        required />
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <select [ngModel]="gender" name="gender">
+        <option *ngFor="let gen of genders" [value]="gen">
+          {{gen}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Activity Level</label>
+      <select [ngModel]="activity" name="activity">
+        <option value="1.2">None</option>
+        <option value="1.375">Light</option>
+        <option value="1.55">Moderate</option>
+        <option value="1.725">Heavy</option>
+        <option value="1.9">Very Heavy</option>
+      </select>
+    </div>
+    <button class="btn btn-primary">Calculate</button>
+  </form>
