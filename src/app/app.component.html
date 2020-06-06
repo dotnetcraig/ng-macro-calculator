@@ -4,24 +4,7 @@
       <h1>Macro Calculator</h1>
       <app-details-form></app-details-form>
       <hr />
-      <div *ngIf="bmr > 0">
-        <h2>Your results</h2>
-        <p>Your BMR is {{ bmr }} and based on your activity levels, your TDEE is {{tdee}} </p>
-        <table class="table">
-          <tr>
-            <td>Protein</td>
-            <td>{{ proteinGrams }} grams ({{ protein }} kCals)</td>
-          </tr>
-          <tr>
-            <td>Carbs</td>
-            <td>{{ carbGrams }} grams ({{ carbs }} kCals)</td>
-          </tr>
-          <tr>
-            <td>Fats</td>
-            <td>{{fatGrams}} grams ({{ fats }} kCals)</td>
-          </tr>
-        </table>
-      </div>
+      <app-results></app-results>
     </div>
   </div>
 </div>
