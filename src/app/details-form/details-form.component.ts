@@ -7,15 +7,12 @@ import { MacroService } from '../macro.service';
   templateUrl: './details-form.component.html',
   styleUrls: ['./details-form.component.css']
 })
-export class DetailsFormComponent implements OnInit {
+export class DetailsFormComponent {
   genders = [ 'Male', 'Female' ];
   gender = 'Male';
   activity = 1.2;
 
   constructor(private macroService: MacroService) { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit(detailForm: NgForm) {
     this.macroService.calculateBmr(
@@ -24,6 +21,8 @@ export class DetailsFormComponent implements OnInit {
       detailForm.value.height,
       detailForm.value.age
     );
+
+    this.macroService.setTdee(detailForm.value.activity);
   }
 
 }

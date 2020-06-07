@@ -1,13 +1,17 @@
-export class Macros {
-    constructor(
-        private protein: number,
-        private carbs: number,
-        private fats: number
-    ){}
+import { Macro } from './macro.model'
 
-    // return calorie: gram
-    // get proteinDetails(): { [key: number]: number } {
-    //     const grams = this.protein / 4;
-    //     return new { this.protein: grams };
-    // }
+export class Macros {
+    public protein: Macro;
+    public carbs: Macro;
+    public fats: Macro;
+
+    constructor(
+        protein: number,
+        carbs: number,
+        fats: number
+    ){
+        this.protein = new Macro(protein, 4);
+        this.carbs = new Macro(carbs, 4);
+        this.fats = new Macro(fats, 9);
+    }
 }

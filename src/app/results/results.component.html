@@ -1,18 +1,18 @@
 <div *ngIf="showResults">
-    <h2>Your results</h2>
-    <p>Your BMR is {{ bmr }} and based on your activity levels, your TDEE is {{tdee}} </p>
-    <table class="table">
-      <tr>
-        <td>Protein</td>
-        <td>{{ proteinGrams }} grams ({{ protein }} kCals)</td>
-      </tr>
-      <tr>
-        <td>Carbs</td>
-        <td>{{ carbGrams }} grams ({{ carbs }} kCals)</td>
-      </tr>
-      <tr>
-        <td>Fats</td>
-        <td>{{fatGrams}} grams ({{ fats }} kCals)</td>
-      </tr>
-    </table>
-  </div>
+  <h2>Your results</h2>
+  <p>Your BMR is {{ bmr }} and based on your activity levels, your TDEE is {{tdee}} </p>
+  <table class="table">
+    <tr>
+      <td>Protein</td>
+      <td>{{ macros.protein.grams }} grams ({{ macros.protein.calories }} kCals)</td>
+    </tr>
+    <tr>
+      <td>Carbs</td>
+      <td>{{ macros.carbs.grams }} grams ({{ macros.carbs.calories }} kCals)</td>
+    </tr>
+    <tr>
+      <td>Fats</td>
+      <td>{{ macros.fats.grams}} grams ({{ macros.fats.calories }} kCals)</td>
+    </tr>
+  </table>
+</div>
